@@ -32,6 +32,7 @@ function draw(){
     background("powderblue");
     text("Score:"+score,700,50);
         if (gamestate === 0){
+            score=score+Math.round((getFrameRate()/60));
             if (keyDown("space") && ball.y>300){
                 ball.velocityY = -11.5;
             }
